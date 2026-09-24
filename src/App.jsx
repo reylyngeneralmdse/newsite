@@ -25,6 +25,14 @@ const branches = [
   },
 ]
 
+const link = [
+  {
+    mess: 'https://njxdthtkf2ypbmoq.public.blob.vercel-storage.com/messenger.svg',
+    fb: 'https://njxdthtkf2ypbmoq.public.blob.vercel-storage.com/fb.svg',
+    gmaps: 'https://njxdthtkf2ypbmoq.public.blob.vercel-storage.com/gmaps.svg' 
+  }
+]
+
 function PinIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-none stroke-current" strokeWidth="2"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>
 }
@@ -35,58 +43,6 @@ function PhoneIcon() {
 
 function ArrowIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-none stroke-current" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-}
-
-function FacebookIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      className="h-5 w-5 fill-current"
-    >
-      <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.099 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.017 1.792-4.687 4.533-4.687 1.312 0 2.686.236 2.686.236v2.953h-1.514c-1.491 0-1.955.93-1.955 1.886v2.272h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.099 24 12.073Z" />
-    </svg>
-  )
-}
-
-function MessengerIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      className="h-5 w-5 fill-current"
-    >
-      <path d="M12 2C6.477 2 2 6.166 2 11.303c0 2.93 1.46 5.57 3.83 7.29V22l3.51-1.93c.85.24 1.74.37 2.66.37 5.523 0 10-4.166 10-9.137C22 6.166 17.523 2 12 2Zm.99 12.25-2.55-2.72-4.98 2.72 5.48-5.82 2.49 2.72 5.04-2.72-5.48 5.82Z" />
-    </svg>
-  )
-}
-
-function MapsIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      className="h-5 w-5"
-    >
-      <path
-        fill="#34A853"
-        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z"
-      />
-      <path
-        fill="#4285F4"
-        d="M12 2c-1.45 0-2.77.44-3.88 1.19L12 9l3.88-5.81A6.96 6.96 0 0 0 12 2Z"
-      />
-      <path
-        fill="#FBBC04"
-        d="M5.42 6.08A6.96 6.96 0 0 0 5 9c0 1.64.72 3.55 1.63 5.39L12 9 5.42 6.08Z"
-      />
-      <path
-        fill="#EA4335"
-        d="M18.58 6.08 12 9l5.37 5.39C18.28 12.55 19 10.64 19 9c0-1.06-.24-2.05-.67-2.92l.25-.0Z"
-      />
-      <circle cx="12" cy="9" r="2.5" fill="white" />
-    </svg>
-  )
 }
 
 function CallIcon() {
@@ -128,8 +84,8 @@ function BranchCard({ branch, index }) {
       </div>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-2">
-        <a href={branch.facebook} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3.5 text-sm font-bold text-white transition hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"><FacebookIcon />Visit Facebook <ArrowIcon /></a>
-        <a href={branch.maps} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-teal-50 px-4 py-3.5 text-sm font-bold text-teal-800 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"><MapsIcon />Get Directions <ArrowIcon /></a>
+        <a href={branch.facebook} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3.5 text-sm font-bold text-white transition hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"><img src="{link.fb}" alt="Facebook Icon" className="h-5 w-5"></img>Visit Facebook <ArrowIcon /></a>
+        <a href={branch.maps} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-teal-50 px-4 py-3.5 text-sm font-bold text-teal-800 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"><img src="{link.gmaps}" alt="Google Maps Icon" className="h-5 w-5"></img>Get Directions <ArrowIcon /></a>
         <a href={`tel:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"><CallIcon />Call {branch.locs}</a>
         <a href={`sms:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"><SmsIcon />Text {branch.locs}</a>
         <a
@@ -138,7 +94,7 @@ function BranchCard({ branch, index }) {
   rel="noreferrer"
   className="sm:col-span-2 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"
 >
-  <MessengerIcon />
+  <img src="{link.mess}" alt="Messenger Icon" className="h-5 w-5"></img>
   <span>Message {branch.locs}</span>
   <ArrowIcon />
 </a>
