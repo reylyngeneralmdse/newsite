@@ -37,7 +37,7 @@ function BranchCard({ branch, index }) {
   return (
     <article className="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-7 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8">
       <div className={`absolute inset-x-0 top-0 h-1.5 ${branch.accent}`} />
-      <h3 className="mt-3 font-serif text-3xl font-bold text-slate-900">{branch.name}</h3>
+      <h3 className="mt-3 text-3xl font-bold text-slate-900">{branch.name}</h3>
 
       <div className="mt-7 space-y-4 border-y border-stone-100 py-6 text-slate-600">
         <div className="flex items-start gap-3"><span className="mt-0.5 text-teal-700"><PinIcon /></span><p>{branch.location}</p></div>
