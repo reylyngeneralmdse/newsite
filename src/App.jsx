@@ -132,7 +132,16 @@ function BranchCard({ branch, index }) {
         <a href={branch.maps} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-teal-50 px-4 py-3.5 text-sm font-bold text-teal-800 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"><MapsIcon />Get Directions <ArrowIcon /></a>
         <a href={`tel:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"><CallIcon />Call {branch.locs}</a>
         <a href={`sms:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"><SmsIcon />Text {branch.locs}</a>
-        <a href={branch.messenger} target="_blank" rel="noreferrer" classname="flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200 sm:col-span-2"><MessengerIcon />Message {branch.locs}</a>
+        <a
+  href={branch.messenger}
+  target="_blank"
+  rel="noreferrer"
+  className="sm:col-span-2 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"
+>
+  <MessengerIcon />
+  <span>Message {branch.locs}</span>
+  <ArrowIcon />
+</a>
       </div>
     </article>
   )
