@@ -1,6 +1,6 @@
 import React from 'react'
 
-const logoUrl = 'https://3mazszvq4r7b66na.private.blob.vercel-storage.com/logo.webp?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfM21henNadnE0UjdCNjZOYSIsIm93bmVySWQiOiJ0ZWFtXzFhTFVFalhIT0hPZDA1cTc3eDlUS2NueCIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzkwMjk2MDMxMjM0LCJpYXQiOjE3OTAyNTI4MzEzNDh9.MLwl79IqkCX2PwyYOxyR4SCLXUdbgz2N4kjt9xzl5io&vercel-blob-signature=JW-KFATlnT1KfKnAKHcj8-dVCgCvx5Ot7XO--v3LdGU'
+const logoUrl = 'https://njxdthtkf2ypbmoq.public.blob.vercel-storage.com/logo.webp'
 
 const branches = [
   {
