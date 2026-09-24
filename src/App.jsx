@@ -4,15 +4,15 @@ const logoUrl = 'https://github.com/reylyngeneralmdse/site/raw/refs/heads/main/l
 
 const branches = [
   {
-    name: 'Bagumbong, Caloocan City Branch',
-    location: 'Brgy. 171 Bagumbong, Caloocan City',
+    name: 'Bagumbong Branch',
+    location: 'Bagumbong, Caloocan City',
     phone: '0922 831 5440',
     facebook: 'https://facebook.com/reylyngeneralmdsebagumbong',
     maps: 'https://maps.app.goo.gl/wRGExJZQXqptjnfWA',
-    accent: 'bg-amber-500',
+    accent: 'bg-teal-600',
   },
   {
-    name: 'Marilao, Bulacan Branch',
+    name: 'Sta. Rosa I Branch',
     location: 'Sta. Rosa I, Marilao, Bulacan',
     phone: '0919 233 1955',
     facebook: 'https://facebook.com/reylyngeneralmdsestarosa',
@@ -37,6 +37,7 @@ function BranchCard({ branch, index }) {
   return (
     <article className="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-7 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8">
       <div className={`absolute inset-x-0 top-0 h-1.5 ${branch.accent}`} />
+      <p className="mt-2 text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Branch 0{index + 1}</p>
       <h3 className="mt-3 font-serif text-3xl font-bold text-slate-900">{branch.name}</h3>
 
       <div className="mt-7 space-y-4 border-y border-stone-100 py-6 text-slate-600">
@@ -57,22 +58,32 @@ export default function App() {
     <div className="min-h-screen overflow-hidden">
       <header className="relative isolate bg-teal-950 text-white">
         <div className="absolute inset-0 -z-10 opacity-30 [background-image:radial-gradient(circle_at_20%_0%,#5eead4_0,transparent_30%),radial-gradient(circle_at_90%_80%,#fbbf24_0,transparent_25%)]" />
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 lg:px-8">
-          <a href="#top" className="flex items-center gap-3" aria-label="Reylyn General Merchandise home">
-            <img src={logoUrl} alt="Reylyn General Merchandise logo" className="flex h-11 w-11 object-contain" />
-          </a>
+        <nav className="mx-auto flex max-w-6xl justify-end px-6 py-6 lg:px-8">
+          <a href="#branches" className="rounded-full border border-white/25 px-4 py-2 text-sm font-semibold transition hover:bg-white/10">Our branches</a>
         </nav>
         <section id="top" className="mx-auto max-w-6xl px-6 pb-24 pt-16 text-center sm:pb-28 sm:pt-20 lg:px-8">
-          <h1 className="mx-auto mt-7 max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">Reylyn General<br className="hidden sm:block" /> Merchandise</h1>
+          <p className="mx-auto w-fit rounded-full border border-teal-300/30 bg-teal-800/40 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-teal-100">Your neighborhood store</p>
+          <img src={logoUrl} alt="Reylyn General Merchandise logo" className="mx-auto mt-7 h-auto w-28 object-contain drop-shadow-2xl sm:w-36 lg:w-44" />
+          <h1 className="mx-auto mt-5 max-w-4xl font-serif text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">Reylyn General<br className="hidden sm:block" /> Merchandise</h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-teal-50/85 sm:text-xl">Quality general merchandise for your everyday needs, served with care from our local branches.</p>
           <a href="#branches" className="mt-9 inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-200 focus:ring-offset-2 focus:ring-offset-teal-950">Find a branch <ArrowIcon /></a>
         </section>
       </header>
 
       <main id="branches" className="mx-auto max-w-6xl px-6 py-20 sm:py-24 lg:px-8">
+        <div className="max-w-2xl">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Come visit us</p>
+          <h2 className="mt-3 font-serif text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Two branches, one helpful team.</h2>
+          <p className="mt-4 text-lg leading-8 text-slate-600">Choose your nearest Reylyn branch for updates, directions, or a quick call.</p>
+        </div>
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {branches.map((branch, index) => <BranchCard key={branch.name} branch={branch} index={index} />)}
         </div>
       </main>
+
+      <footer className="border-t border-stone-200 bg-white px-6 py-8 text-center text-sm text-slate-500">
+        © {new Date().getFullYear()} Reylyn General Merchandise. All rights reserved.
+      </footer>
     </div>
   )
 }
