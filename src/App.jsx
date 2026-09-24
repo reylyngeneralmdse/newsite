@@ -25,13 +25,12 @@ const branches = [
   },
 ]
 
-const link = [
+const link = 
   {
     mess: 'https://njxdthtkf2ypbmoq.public.blob.vercel-storage.com/messenger.svg',
     fb: 'https://njxdthtkf2ypbmoq.public.blob.vercel-storage.com/fb.svg',
     gmaps: 'https://njxdthtkf2ypbmoq.public.blob.vercel-storage.com/gmaps.svg' 
   }
-]
 
 function PinIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-none stroke-current" strokeWidth="2"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>
@@ -84,8 +83,8 @@ function BranchCard({ branch, index }) {
       </div>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-2">
-        <a href={branch.facebook} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3.5 text-sm font-bold text-white transition hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"><img src="{link.fb}" alt="Facebook Icon" className="h-5 w-5"></img>Visit Facebook <ArrowIcon /></a>
-        <a href={branch.maps} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-teal-50 px-4 py-3.5 text-sm font-bold text-teal-800 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"><img src="{link.gmaps}" alt="Google Maps Icon" className="h-5 w-5"></img>Get Directions <ArrowIcon /></a>
+        <a href={branch.facebook} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3.5 text-sm font-bold text-white transition hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"><img src={link.fb} alt="Facebook Icon" className="h-5 w-5"></img>Visit Facebook <ArrowIcon /></a>
+        <a href={branch.maps} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-teal-50 px-4 py-3.5 text-sm font-bold text-teal-800 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"><img src={link.gmaps} alt="Google Maps Icon" className="h-5 w-5"></img>Get Directions <ArrowIcon /></a>
         <a href={`tel:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"><CallIcon />Call {branch.locs}</a>
         <a href={`sms:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"><SmsIcon />Text {branch.locs}</a>
         <a
@@ -94,7 +93,7 @@ function BranchCard({ branch, index }) {
   rel="noreferrer"
   className="sm:col-span-2 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"
 >
-  <img src="{link.mess}" alt="Messenger Icon" className="h-5 w-5"></img>
+  <img src={link.mess} alt="Messenger Icon" className="h-5 w-5"></img>
   <span>Message {branch.locs}</span>
   <ArrowIcon />
 </a>
