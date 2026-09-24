@@ -62,8 +62,8 @@ export default function App() {
       <header className="relative isolate bg-teal-950 text-white">
         <div className="absolute inset-0 -z-10 opacity-30 [background-image:radial-gradient(circle_at_20%_0%,#5eead4_0,transparent_30%),radial-gradient(circle_at_90%_80%,#fbbf24_0,transparent_25%)]" />
         <section id="top" className="mx-auto max-w-6xl px-6 pb-24 pt-16 text-center sm:pb-28 sm:pt-20 lg:px-8">
-          <img src={logoUrl} alt="Reylyn General Merchandise logo" className="mx-auto mt-7 h-50 w-auto object-contain drop-shadow-2xl sm:w-36 lg:w-44" />
-          <h1 className="mx-auto mt-5 max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">Reylyn<br className="hidden sm:block" />General Merchandise</h1>
+          <img src={logoUrl} alt="Reylyn General Merchandise logo" className="mx-auto mt-7 h-auto w-100% max-width-100px object-contain drop-shadow-2xl sm:w-36 lg:w-44" />
+          <h1 className="mx-auto mt-5 max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">Reylyn<br className="hidden sm:block" /> General Merchandise</h1>
           <a href="#branches" className="mt-9 inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-200 focus:ring-offset-2 focus:ring-offset-teal-950">Find a branch <ArrowIcon /></a>
         </section>
       </header>
