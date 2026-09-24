@@ -83,20 +83,11 @@ function BranchCard({ branch, index }) {
       </div>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        <a href={branch.messenger} target="_blank" rel="noreferrer" className="sm:col-span-2 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"><img src={link.mess} alt="Messenger Icon" className="h-5 w-5"></img><span>Message {branch.locs}</span><ArrowIcon /></a>
         <a href={branch.facebook} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3.5 text-sm font-bold text-white transition hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"><img src={link.fb} alt="Facebook Icon" className="h-5 w-5"></img>Visit Facebook <ArrowIcon /></a>
         <a href={branch.maps} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-teal-50 px-4 py-3.5 text-sm font-bold text-teal-800 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"><img src={link.gmaps} alt="Google Maps Icon" className="h-5 w-5"></img>Get Directions <ArrowIcon /></a>
         <a href={`tel:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"><CallIcon />Call {branch.locs}</a>
         <a href={`sms:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"><SmsIcon />Text {branch.locs}</a>
-        <a
-  href={branch.messenger}
-  target="_blank"
-  rel="noreferrer"
-  className="sm:col-span-2 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200"
->
-  <img src={link.mess} alt="Messenger Icon" className="h-5 w-5"></img>
-  <span>Message {branch.locs}</span>
-  <ArrowIcon />
-</a>
       </div>
     </article>
   )
