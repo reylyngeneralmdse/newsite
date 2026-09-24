@@ -6,6 +6,7 @@ const branches = [
   {
     name: 'Brgy. 171 Bagumbong, Caloocan City Branch',
     location: 'Brgy. 171 Bagumbong, Caloocan City',
+    locs:'Bagumbong Branch',
     phone: '0922 831 5440',
     facebook: 'https://facebook.com/reylyngeneralmerchandisebagumbong',
     maps: 'https://maps.app.goo.gl/wRGExJZQXqptjnfWA',
@@ -14,6 +15,7 @@ const branches = [
   {
     name: 'Marilao, Bulacan Branch',
     location: 'Sta. Rosa I, Marilao, Bulacan',
+    locs: 'Sta. Rosa I Branch',
     phone: '0919 233 1955',
     facebook: 'https://facebook.com/reylyngeneralmerchandisestarosa',
     maps: 'https://maps.app.goo.gl/4JjNPM7K1A8Gd6eT6',
@@ -47,6 +49,8 @@ function BranchCard({ branch, index }) {
       <div className="mt-6 grid gap-3 sm:grid-cols-2">
         <a href={branch.facebook} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3.5 text-sm font-bold text-white transition hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2">Visit Facebook <ArrowIcon /></a>
         <a href={branch.maps} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-teal-50 px-4 py-3.5 text-sm font-bold text-teal-800 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">Get Directions <ArrowIcon /></a>
+        <a href={`tel:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200">Call {branch.locs}</a>
+        <a href={`sms:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200">Text {branch.locs}</a>
       </div>
     </article>
   )
@@ -58,8 +62,8 @@ export default function App() {
       <header className="relative isolate bg-teal-950 text-white">
         <div className="absolute inset-0 -z-10 opacity-30 [background-image:radial-gradient(circle_at_20%_0%,#5eead4_0,transparent_30%),radial-gradient(circle_at_90%_80%,#fbbf24_0,transparent_25%)]" />
         <section id="top" className="mx-auto max-w-6xl px-6 pb-24 pt-16 text-center sm:pb-28 sm:pt-20 lg:px-8">
-          <img src={logoUrl} alt="Reylyn General Merchandise logo" className="mx-auto mt-7 h-auto w-28 object-contain drop-shadow-2xl sm:w-36 lg:w-44" />
-          <h1 className="mx-auto mt-5 max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">Reylyn General<br className="hidden sm:block" /> Merchandise</h1>
+          <img src={logoUrl} alt="Reylyn General Merchandise logo" className="mx-auto mt-7 h-50 w-auto object-contain drop-shadow-2xl sm:w-36 lg:w-44" />
+          <h1 className="mx-auto mt-5 max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">Reylyn<br className="hidden sm:block" />General Merchandise</h1>
           <a href="#branches" className="mt-9 inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-200 focus:ring-offset-2 focus:ring-offset-teal-950">Find a branch <ArrowIcon /></a>
         </section>
       </header>
