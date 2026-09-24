@@ -9,8 +9,9 @@ const branches = [
     locs:'Bagumbong Branch',
     phone: '0922 831 5440',
     facebook: 'https://facebook.com/reylyngeneralmerchandisebagumbong',
+    messenger: 'https://m.me/518341194693638/',
     maps: 'https://maps.app.goo.gl/wRGExJZQXqptjnfWA',
-    accent: 'bg-amber-500',
+    accent: 'bg-amber-500'
   },
   {
     name: 'Marilao, Bulacan Branch',
@@ -18,6 +19,7 @@ const branches = [
     locs: 'Sta. Rosa I Branch',
     phone: '0919 233 1955',
     facebook: 'https://facebook.com/reylyngeneralmerchandisestarosa',
+    messenger: 'https://m.me/281507361722042/',
     maps: 'https://maps.app.goo.gl/4JjNPM7K1A8Gd6eT6',
     accent: 'bg-amber-500',
   },
@@ -51,6 +53,7 @@ function BranchCard({ branch, index }) {
         <a href={branch.maps} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-teal-50 px-4 py-3.5 text-sm font-bold text-teal-800 transition hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">Get Directions <ArrowIcon /></a>
         <a href={`tel:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200">Call {branch.locs}</a>
         <a href={`sms:${branch.phone.replaceAll(' ', '')}`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200">Text {branch.locs}</a>
+        <a href={branch.messenger} className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-4 py-3.5 text-sm font-bold text-slate-800 transition hover:bg-slate-200">Message {branch.locs}</a>
       </div>
     </article>
   )
